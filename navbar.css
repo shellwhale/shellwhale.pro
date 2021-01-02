@@ -1,0 +1,162 @@
+#nav-bar {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+
+    font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	transition: 0.5s;
+}
+
+#nav-bar .nav-menu {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-bar .nav-menu li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#nav-bar .nav-menu li a {
+	display: block;
+	color: #fff;
+}
+
+#nav-bar .nav-menu li a:hover {
+	display: block;
+	color: #0dc212;
+}
+
+#nav-bar .nav-menu li.logo {
+	padding-left: 20px;
+    flex: 1;
+}
+
+#nav-bar .nav-menu li.logo img {
+	height: 50px;
+    width: 50px;
+    
+    background-color: #000;
+    border-radius: 100%;
+
+    display: block;
+}
+
+#nav-bar .nav-menu li.burger-button {
+	order: 1;
+	padding-right: 20px;
+}
+
+#nav-bar .nav-menu li.burger-button .burger-button-icon {
+	height: 50px;
+	width: 50px;
+	
+
+	display: block;
+}
+
+#nav-bar .nav-menu li.item {
+	width: 100%;
+	text-align: center;
+	order: 2;
+
+	display: none;
+}
+
+/* Activated on mobile */
+
+#nav-bar .nav-menu li.item.active {
+    opacity: 0;
+    
+    animation: activation 0.5s ease-in forwards;
+	display: block;
+}
+
+.enabled-burger-menu {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.78);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.78);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.78);
+}
+
+@keyframes activation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* Tablet, portrait */
+@media screen and (min-width: 767px) {
+    .nav-menu li {
+        padding: 15px 20px;
+    }
+
+    #nav-bar .nav-menu li.logo {
+        order: 1;
+    }
+
+	#nav-bar .nav-menu li.item {
+		order: 2;
+		display: block;
+        width: auto;
+    }
+    
+	#nav-bar .nav-menu li.item.last a {
+        padding-right: 20px;
+	}
+
+	#nav-bar .nav-menu li.burger-button {
+		display: none;
+	}
+}
+
+#nav-bar.scrolled {
+	background-color: #fff;
+	box-shadow: 0px 7px 11px -10px #000000;
+}
+
+#nav-bar.scrolled .nav-menu li a {
+	color: #000;
+}
+#nav-bar.scrolled .nav-menu li a:hover {
+	color: #0dc212;
+}
+
+/* Tablet, landscape */
+@media screen and (min-width: 992px) {
+	#nav-bar {
+		width: 100%;
+	}
+	#nav-bar .nav-menu {
+		width: 80%;
+	}
+}
+
+.job-description {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.job-duration {
+	margin-bottom: 40px;
+}
+
+.experience-card {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
